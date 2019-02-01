@@ -1,9 +1,21 @@
-# Unite 2018 - React/Node App Workshop (Revamped Version)
+# Polaris Page Title Issue
 
-This is an updated example of Shopify's repo for the Unite 2018 app walkthrough. I found the tutorial very helpful, but some of the instructions were outdated and or not working. This repo will serve to be a revamped version of their demonstrated Shopify app walkthrough. Please note: I'm in no way affiliated with Shopify.
+Demo repo for fixing Polaris page header/title error (maybe bug).
 
-View the [original repo here](https://github.com/Shopify/unite-react-node-app-workshop)
+## Steps to recreate issue
 
-Start the revamped walkthrough by going to the "walkthrough" directory
+```bash
+npm install
+```
 
-View the final result of the walkthrough in the "complete-app" directory
+Start up Ngrok with port matching one set in `.env`
+
+```bash
+./ngrok http 3000
+```
+
+Fill out `.env.example` with correct API information and rename to `.env`
+
+Visit url with Shopify domain appended: `auth/inline?shop=your-shop-here.myshopi.com`. Which you are then redirected to Shopify to complete authorization. Clear cookies if there is a mistake on the way.
+
+You are now able to see issue with HTML element `Polaris-Page-Header` swallowing up all page content. For more information [see this GitHub ticket](https://github.com/Shopify/polaris-react/issues/824#issuecomment-454571430).
