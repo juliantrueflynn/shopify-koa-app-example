@@ -11,10 +11,11 @@
   "author": "juliantrueflynn",
   "license": "MIT",
   "dependencies": {
-    "@shopify/app-bridge": "^1.0.5",
+    "@shopify/app-bridge": "^0.7.3",
     "@shopify/koa-shopify-auth": "^3.1.13",
     "@shopify/polaris": "^3.6.0",
-    "@shopify/react-html": "^1.0.2",
+    "@shopify/react-effect": "^1.0.3",
+    "@shopify/react-html": "^6.2.0",
     "@shopify/react-shopify-app-route-propagator": "^2.0.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",

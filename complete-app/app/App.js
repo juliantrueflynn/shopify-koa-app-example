@@ -10,7 +10,7 @@ class App extends React.Component {
   };
 
   render() {
-    return (      
+    return (
       <React.Fragment>
         <RoutePropagator location={this.props.location} app={this.context.polaris.appBridge} />
         <Switch>
