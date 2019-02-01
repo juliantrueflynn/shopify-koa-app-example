@@ -5,13 +5,20 @@ import ShopifyAppProvider from '../app/components/ShopifyAppProvider';
 import App from '../app/App';
 
 const renderReactApp = (ctx, next) => {
+  const stylesheet = (
+    <link
+      rel="stylesheet"
+      href="https://sdks.shopifycdn.com/polaris/latest/polaris.css"
+    />
+  );
+
   ctx.body = render(
-    <Html scripts={[{ path: 'bundle.js' }]}>
-      <StaticRouter location={ctx.url} context={{}}>
-        <ShopifyAppProvider>
+    <Html scripts={[{ path: 'bundle.js' }]} headMarkup={stylesheet}>
+      <ShopifyAppProvider>
+        <StaticRouter location={ctx.url} context={{}}>
           <App />
-        </ShopifyAppProvider>
-      </StaticRouter>
+        </StaticRouter>
+      </ShopifyAppProvider>
     </Html>
   );
 
