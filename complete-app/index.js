@@ -1,7 +1,7 @@
 import 'isomorphic-fetch';
 import server from './server';
 
-const {PORT = 3000} = process.env;
+const { PORT = 3000 } = process.env;
 
 // start the server on the given port
 server.listen(3000, () => {

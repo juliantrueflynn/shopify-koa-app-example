@@ -1,7 +1,6 @@
 const webpack = require('webpack');
 const { NODE_ENV, SHOPIFY_API_CLIENT_KEY } = process.env;
 
-console.log('SHOPIFY_API_CLIENT_KEY', SHOPIFY_API_CLIENT_KEY);
 module.exports = {
   mode: NODE_ENV === 'production' ? NODE_ENV : 'development',
   // the place webpack will start when building your bundles

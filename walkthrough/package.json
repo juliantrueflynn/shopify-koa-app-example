@@ -1,0 +1,45 @@
+{
+  "name": "shopify-koa-app",
+  "version": "1.0.0",
+  "description": "An embedded Shopify app! (Updated workshop walkthrough)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --exec babel-node index.js",
+    "start": "npm run dev"
+  },
+  "author": "juliantrueflynn",
+  "license": "MIT",
+  "dependencies": {
+    "@shopify/app-bridge": "^1.0.5",
+    "@shopify/koa-shopify-auth": "^3.1.13",
+    "@shopify/polaris": "^3.6.0",
+    "@shopify/react-html": "^1.0.2",
+    "@shopify/react-shopify-app-route-propagator": "^1.0.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "dotenv": "^6.1.0",
+    "es6-promise": "^4.2.5",
+    "isomorphic-fetch": "^2.2.1",
+    "js-cookie": "^2.2.0",
+    "koa": "^2.6.2",
+    "koa-session": "^5.10.1",
+    "koa-webpack": "^3.0.2",
+    "prop-types": "^15.6.2",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-fetch-component": "^6.0.0",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "webpack": "^4.6.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "nodemon": "^1.17.3",
+    "prettier": "^1.12.1",
+    "webpack-cli": "^2.1.2"
+  }
+}
