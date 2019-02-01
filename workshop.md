@@ -35,7 +35,7 @@ In the root of this project, there are a number of configurations files and a fe
 
 Open up `index.js`, this is the entry point of our application which imports `index.js` and mounts it on port 3000.
 
-If you open the `server/index.js` you will see of our "Hello Unite!" logic. We've also set a few things up so that we can use our `SHOPIFY_SECRET` and `SHOPIFY_API_CLIENT_KEY` using a library called `dotenv`, but more on that later.
+If you open the `server/index.js` you will see of our "Hello Unite!" logic. We've also set a few things up so that we can use our `SHOPIFY_API_SECRET_KEY` and `SHOPIFY_API_CLIENT_KEY` using a library called `dotenv`, but more on that later.
 
 Koa is a minimalistic node framework for modern Javascript apps that we will be using for our server in this workshop. It is built around the ES2016 `async` and `await` keywords.
 
@@ -163,10 +163,10 @@ We are mounting the session middleware and passing our Koa app instance into it.
 
 Next we need to use the Shopify Auth Middleware. To configure it we'll need to pass the apiKey, our secret.
 
-We can grab both our `SHOPIFY_SECRET` and `SHOPIFY_API_CLIENT_KEY` from the environment.
+We can grab both our `SHOPIFY_API_SECRET_KEY` and `SHOPIFY_API_CLIENT_KEY` from the environment.
 
 ```js
-const {SHOPIFY_API_CLIENT_KEY, SHOPIFY_SECRET} = process.env;
+const {SHOPIFY_API_CLIENT_KEY, SHOPIFY_API_SECRET_KEY} = process.env;
 ```
 
 _server/index.js_
@@ -179,7 +179,7 @@ app.use(
     // your shopify app's api key
     apiKey: SHOPIFY_API_CLIENT_KEY,
     // your shopify app's api secret
-    secret: SHOPIFY_SECRET,
+    secret: SHOPIFY_API_SECRET_KEY,
     // our app's permissions
     // we need to write products to the user's store
     scopes: ['write_products'],
@@ -202,7 +202,7 @@ _server/index.js_
 With this done, we'll add `app.keys` to let us use session securely. Set this to your Shopify secret before we mount our session middleware.
 
 ```js
-app.keys = [SHOPIFY_SECRET];
+app.keys = [SHOPIFY_API_SECRET_KEY];
 ```
 
 _server/index.js_

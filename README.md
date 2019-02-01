@@ -1,4 +1,10 @@
-# Unite 2018 - React/Node App Workshop
+# Unite 2018 - React/Node App Workshop (Revamped Version)
+
+This is an updated example of Shopify's repo for the Unite 2018 app walkthrough. I found the tutorial very helpful, but some of the instructions were outdated and or not working. This repo will serve to be a revamped version of their demonstrated Shopify app walkthrough. Please note: I'm in no way affiliated with Shopify.
+
+View the [original repo here](https://github.com/Shopify/unite-react-node-app-workshop).
+
+---
 
 In this repo you'll find everything you need to follow along with the workshop.
 
@@ -43,8 +49,8 @@ For example, for the address above you would add `https://e3fd01a0.ngrok.io/auth
 Rename `.env.example` to `.env` and copy and paste your Shopify Api Key and Secret to this file. These can be found in under App credentials, near the bottom of the App Info page.
 
 ```
-SHOPIFY_API_CLIENT_KEY=YOUR_SHOPIFY_API_CLIENT_KEY
-SHOPIFY_SECRET=YOUR_SHOPIFY_SECRET
+SHOPIFY_API_CLIENT_KEY=xxxxxxxxxxxxxxxxxxxxxxxxxx
+SHOPIFY_API_SECRET_KEY=xxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
 ## Starting the app
@@ -64,8 +70,8 @@ If you ran into any issues with the above steps, please reach our to matt.seccaf
 Rename `.env.example` to `.env` and copy and paste your Shopify Api Key and Secret to this file.
 
 ```
-SHOPIFY_API_CLIENT_KEY=YOUR_SHOPIFY_API_CLIENT_KEY
-SHOPIFY_SECRET=YOUR_SHOPIFY_SECRET
+SHOPIFY_API_CLIENT_KEY=xxxxxxxxxxxxxxxxxxxxxxxxxx
+SHOPIFY_API_SECRET_KEY=xxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
 ## Using this repo
