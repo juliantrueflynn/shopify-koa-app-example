@@ -6,7 +6,26 @@ View the [original repo here](https://github.com/Shopify/unite-react-node-app-wo
 
 ---
 
+#### Table of Contents
+
+* [App overview](#app-overview)
+* [Before starting](#before-starting)
+* [Starting the app](#starting-the-app)
+* [Intro to Koa](#intro-to-koa)
+* [Authorization with Shopify](#authorization-with-shopify)
+* [Serving HTML with React](#serving-html-with-react)
+* [React in the browser](#react-in-the-browser)
+* [Fetching some games](#fetching-some-games)
+* [Creating products with GraphQL](#creating-products-with-graphql)
+* [Routing with React](#routing-with-react)
+* [Updating URL bar with app](#updating-url-bar-with-app)
+* [Additional resources](#additional-resources)
+
 In this repo you'll find everything you need to follow along with the walkthrough.
+
+## App overview
+
+Together we will be building a Shopify app that creates products from a list of hot board games. To do so we'll need to write a Koa server which knows how retrieve an access token from Shopify, build a React front-end that knows how to fetch boardgames and create products from those boardgames using Shopify's admin GraphQL API.
 
 ## Before starting
 
@@ -74,42 +93,9 @@ SHOPIFY_API_CLIENT_KEY=xxxxxxxxxxxxxxxxxxxxxxxxxx
 SHOPIFY_API_SECRET_KEY=xxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
----
+## Intro to Koa
 
-# Building a Shopify App
-
-_with React and Koa_
-
-### App overview
-
-Together we will be building a Shopify app that creates products from a list of hot board games. To do so we'll need to write a Koa server which knows how retrieve an access token from Shopify, build a React front-end that knows how to fetch boardgames and create products from those boardgames using Shopify's admin GraphQL API.
-
-### Goals
-
-* Give users a running start building a modern web-app using Shopify’s tools for the Node and React ecosystems.
-* Raise awareness with attendees about what libraries we have available for building apps.
-* Level up attendees skills with modern Javascript libraries.
-
-#### Structure
-
-* Introduction
-* Babel and ES6
-* Set up and intro to Koa
-* Let’s build an app!
-  * Step 1: Authing with Shopify
-  * Step 2: Serving HTML with React
-  * Step 3: React in the Browser
-  * Step 4: Fetching some games
-  * Step 5: Creating Products with GraphQL
-  * Step 6: Routing with React
-  * Step 7: Getting our url bar to update
-* Additional Resources
-
-### Set up and intro to Koa
-
-If you have not done so already, follow the steps in the [README](./README.md).
-
-In the root of this project, there are a number of configurations files and a few Javascript files to get us started.
+In the root of this directory, there are a number of configurations files and a few Javascript files to get us started.
 
 Open up `index.js`, this is the entry point of our application which imports `index.js` and mounts it on port 3000.
 
@@ -210,9 +196,7 @@ As you can see, Koa made its way up the middleware chain pausing each function w
 
 Hopefully that gave you a good primer on Koa, we will be using installing and using some Koa middleware packages from npm as well as writing our own middlelware through out this workshop.
 
-### Let’s build an app!
-
-#### Step 1: Authing with Shopify
+## Authorization with Shopify
 
 The first middleware we are going to install will be used to get our app to show up in our Shopify store. We'll use the koa auth package that Shopify provides. Install it by running:
 
@@ -324,7 +308,7 @@ Everything below this middleware will require authentication, everything above w
 
 Congratulations! You have just built a app that will render in the Shopify admin and knows how to authenicate with Shopify. Now lets actually work on making our app do something.
 
-#### Step 2: Serving HTML with React
+## Serving HTML with React
 
 Up to this point, our server has just been rendering a simple string, but we actually want to serve up an HTML page. In the past, this might have done with templating or string interpolation, but we will use React on the server to generate our app markup. This will let us reuse our code on the server and client and have one source of truth for the resulting UI.
 
@@ -432,7 +416,7 @@ Unfortunately, this code won't actually work yet.
 
 This is due to the fact that we are missing one crucial piece of a modern web app; client side Javascript. We will need to be able run our React code in the browser to rectify this.
 
-#### Step 3: React in the Browser
+## React in the browser
 
 Much like we have a server folder for server code, lets create a client folder for client code. We should strive to end up with very little code in this folder as the bulk of our logic should be universal between both the server and client, living in the `/app` folder.
 
@@ -489,7 +473,7 @@ _server/render-react-app.js_
 
 Now if you refresh the browser, you should see a log in our console "Hello from the client", this is coming from client-side Javascript.
 
-#### Step 4: Fetching some games
+## Fetching some games
 
 Now we are finally ready to get our app doing all the things we said it would. Let's fetch some board games so that we can show the user to choose from.
 
@@ -554,7 +538,7 @@ _app/App.js_
 
 If we refresh our page we should now see a list of games.
 
-#### Step 5: Creating Products with GraphQL
+## Creating products with GraphQL
 
 So we now have a list of games, so now we can create products from them. To do this we are going to use Shopify's Admin GraphQL API.
 
@@ -742,7 +726,7 @@ The final code for the `<Mutation />` component should look like this:
 
 _app/App.js_
 
-#### Step 6: Routing with React
+## Routing with React
 
 You are most likely going to need some routes in your Shopify app, so let's do that here. We are going to use React Router 4. It lets us describe our routes declaratively using react components.
 
@@ -809,13 +793,11 @@ Now if you navigate to `/settings` you should see the Setting heading on the pag
 
 #### Excercise
 
-Lets take a few minutes for a quick independent excercise.
-
-1.  See if you can add a few routes to your own application, including a NotFound route and component.
+See if you can add a few routes to your own application, including a NotFound route and component.
 
 Our App.js file is getting pretty large and eventually will get unmanageable. Let’s pull our pages into their own component files.
 
-#### Step 7: Getting our url bar to update
+## Updating URL bar with app
 
 We've built a package to make synchronizing Shopify embedded app's client side routing with the outer iframe host. Let's install that package and use it in our app.
 
@@ -852,7 +834,7 @@ export default function() {
 
 You should now see the url change as you navigate to different areas of your embedded app.
 
-### Additional Resources
+## Additional resources
 
 Here are some additional resources and official documentation about the technologies and patterns we touched on.
 
