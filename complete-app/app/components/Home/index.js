@@ -7,7 +7,7 @@ const Home = () => {
   };
 
   return (
-    <Page title="Home" primaryAction={pagePrimaryAction}>
+    <Page forceRender title="Home" primaryAction={pagePrimaryAction}>
       <Layout>
         <Layout.Section>
           <Card title="Home Card">

@@ -7,7 +7,7 @@ const Settings = () => {
   };
 
   return (
-    <Page title="Settings" primaryAction={pagePrimaryAction}>
+    <Page forceRender title="Settings" primaryAction={pagePrimaryAction}>
       <Layout>
         <Layout.Section>
           <Card title="Settings Card">
