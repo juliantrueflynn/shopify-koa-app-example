@@ -215,7 +215,7 @@ You might see an error screen that states:
 Oauth error invalid_request: The redirect_uri is not whitelisted
 ```
 
-![Ngrok screenshot](public/images/oauth-error-screenshot.png)
+![OAuth error](https://user-images.githubusercontent.com/2691129/52103196-865a9300-25b2-11e9-839c-ae3efce21485.png)
 
 To solve this we need to login to our partners dashboard, go to our App Info and add `YOUR_HTTPS_NGROK_URL/auth/callback` to "Whitelisted redirection URL(s)" textarea.
 

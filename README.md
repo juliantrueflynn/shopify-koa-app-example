@@ -30,7 +30,7 @@ $ ./ngrok http 3000
 
 This should display a UI in your terminal with the public URL of your tunnel and other status and metrics information about connections made over your tunnel. It should something like this:
 
-![Ngrok screenshot](public/images/ngrok-screenshot.png)
+![Ngrok screenshot](https://user-images.githubusercontent.com/2691129/52103164-5c08d580-25b2-11e9-9e72-a2c6165a243d.png)
 
 ### Set up an App on the partners dashboard
 
@@ -42,7 +42,7 @@ Set the app URL to the public URL of you ngrok tunnel. This should be displayed 
 
 In the workshop we'll be using `/auth/callback` as our oauth callback route, so add that to your whitelist.
 
-![Whitelist input screenshot](public/images/whitelist.png)
+![Whitelist input screenshot](https://user-images.githubusercontent.com/2691129/52103176-704cd280-25b2-11e9-903d-4277792140db.png)
 
 For example, for the address above you would add `https://e3fd01a0.ngrok.io/auth/callback`.
 
