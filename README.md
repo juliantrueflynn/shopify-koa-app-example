@@ -8,10 +8,11 @@ Demo repo for fixing Polaris page header/title error (maybe bug).
 npm install
 ```
 
-Start up Ngrok with port matching one set in `.env`
+Start up Ngrok with port matching one set in `.env` and npm
 
 ```bash
 ./ngrok http 3000
+npm start
 ```
 
 Fill out `.env.example` with correct API information and rename to `.env`

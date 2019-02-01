@@ -1,7 +1,7 @@
 import React from 'react';
-import { AppProvider } from '@shopify/polaris';
+import { AppProvider, Page, Layout, Card, TextStyle } from '@shopify/polaris';
+import { Route } from 'react-router-dom';
 import Cookies from 'js-cookie';
-import AppRoutes from './components/AppRoutes';
 
 class App extends React.Component {
   state = {
@@ -12,10 +12,27 @@ class App extends React.Component {
     const { shopOrigin } = this.state;
     const { SHOPIFY_API_CLIENT_KEY } = process.env;
 
+    const pagePrimaryAction = {
+      content: 'Create Widget',
+    };
+
     return (
-      // eslint-disable-next-line no-undef
       <AppProvider shopOrigin={shopOrigin} apiKey={SHOPIFY_API_CLIENT_KEY} forceRedirect>
-        <AppRoutes />
+        <Route path="/" render={() => (
+          <Page title="Home" primaryAction={pagePrimaryAction}>
+            <Layout>
+              <Layout.Section>
+                <Card title="Home Card">
+                  <div>
+                    <TextStyle variation="positive">
+                      “All you need to paint is a few tools, a little instruction, and a vision in your mind.” 
+                    </TextStyle>
+                  </div>
+                </Card>
+              </Layout.Section>
+            </Layout>
+          </Page>
+        )} />
       </AppProvider>
     );
   }
