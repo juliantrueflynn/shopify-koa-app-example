@@ -19,4 +19,4 @@ npm start
 
 Fill out `.env.example` with correct API information and rename to `.env`
 
-Visit url with Shopify domain appended: `auth/inline?shop=your-shop-here.myshopi.com`. Which you are then redirected to Shopify to complete authorization. Clear cookies if there is a mistake on the way.
+Visit url with Shopify domain appended: `auth/inline?shop=your-shop-here.myshopify.com`. Which you are then redirected to Shopify to complete authorization. Clear cookies if there is a mistake on the way.
