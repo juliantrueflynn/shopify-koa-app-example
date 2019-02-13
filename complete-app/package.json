@@ -13,7 +13,7 @@
   "dependencies": {
     "@shopify/app-bridge": "^0.7.3",
     "@shopify/koa-shopify-auth": "^3.1.13",
-    "@shopify/polaris": "^3.6.0",
+    "@shopify/polaris": "^3.7.0",
     "@shopify/react-effect": "^1.0.3",
     "@shopify/react-html": "^6.2.0",
     "@shopify/react-shopify-app-route-propagator": "^2.0.0",
