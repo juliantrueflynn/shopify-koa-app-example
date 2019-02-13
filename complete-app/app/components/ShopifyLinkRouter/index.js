@@ -9,6 +9,8 @@ class ShopifyLinkRouter extends React.Component {
   handleOnClick(e) {
     e.preventDefault();
 
+    console.log('THIS SHOULD SHOW WHEN CLICKING TITLE BAR LINK', e);
+
     const { url, history } = this.props;
     history.push(url);
   }
